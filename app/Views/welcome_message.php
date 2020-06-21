@@ -95,16 +95,32 @@
                   <input type="text" class="form-control transparent" placeholder="Escribe rut de tu ser querido">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="image-input">Ingresa un mensaje de recuerdo</label>
-                  <input type="text" class="form-control transparent" placeholder="Escribe rut de tu ser querido">
+                  <label class="sr-only" for="image-input">Ingresa tu correo de contacto</label>
+                  <input type="email" class="form-control transparent" placeholder="Escribe tu correo de contacto">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="email-input">Ingresa tu correo de contacto</label>
-                  <input type="file" class="form-control transparent" placeholder="Escribe tu correo de contacto">
+                  <label class="sr-only" for="image-input">Ingresa tu teléfono de contacto</label>
+                  <input type="tel" class="form-control transparent" placeholder="Escribe tu teléfono de contacto">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="email-input">Ingresa un mensaje de recuerdo</label>
-                  <textarea class="form-control transparent" placeholder="Escribe un mensaje de recuerdo"></textarea>
+                  <label class="sr-only" for="image-input">Ingresa tu relacion con la persona</label>
+                  <select name="select-relacion" id="select-relacion" class="form-control transparent">
+                    <option value="">Indicanos tu relacion con la persona</option>
+                    <option value="familiar">familiar</option>
+                    <option value="familiar">familiar</option>
+                    <option value="amigo">amigo</option>
+                    <option value="conocido">conocido</option>
+                    <option value="vecino">vecino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="image-input">Adjunta una foto de la persona y un mensaje para ella o el.</label>
+                  <p class="image-text text">(Opcional) Si lo deseas adjunta una foto de la persona y un mensaje para ella o el.</p>
+                  <input type="file" class="form-control transparent" placeholder="Adjunta una imagen de la persona">
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="email-input">Dejale un mensaje de recuerdo</label>
+                  <textarea class="form-control transparent" placeholder="Escribe un mensaje de recuerdo" rows="4"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-fill pull-right" id="btn-confirmar">Confirmar</button>
               </form>

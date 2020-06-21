@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('#btn-confirmar').click(function(e) {
         e.preventDefault();
         enviarFormulario($('#form-inscripcion'));
