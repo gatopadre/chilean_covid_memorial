@@ -1,89 +1,57 @@
-# [Coming Sssoon Page - Free Bootstrap Page](http://demos.creative-tim.com/coming-sssoon-demo-image-background)
+# CodeIgniter 4 Framework
 
-![alt text](https://s3.amazonaws.com/creativetim_bucket/products/20/original/coming_sssoon_thumbnail.png "Coming Soon Page")
+## What is CodeIgniter?
 
-Free one page item based on Bootstrap 3. Use Coming Sssoon Page to create a following group users before actually starting your project! it is light, easy to use and it helps you be in contact with your audience.
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible, and secure. 
+More information can be found at the [official site](http://codeigniter.com).
 
-Why have a coming soon page and a subscription?
+This repository holds the distributable version of the framework,
+including the user guide. It has been built from the 
+[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-Because social media spreads your message, but email and content marketing help you establish a connection with your customers.
+More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
 
-If you start up with this mentality, it will bring you nothing but good. So, when you think you have a hint of a product, try to validate it! Get user engagement, create social media account, set up your Mailchimp account and let people see it through a Coming Soon page.
-
-It may sound complicated or you may be inclined to procastinate, but every step of the way is now made easier. Creative Tim's Coming soon page is a step in that direction. It is seasy to set up and customise to your needs. And it will help your customers get the main idea you are trying to create!
-
-We encourage you to create honest connections with your potential clients. Take the first step and create a coming soon page, you've come to the right place! We covered a number of different uses for the page (standard website, application, video example and a restaurant custom page). Whatever your use is, we think you will find one that fits your needs.
-
-The next step is getting the look you want to the page. We added custom filters (standard black, blue, green, orange, red) that give an edge to the page. We can't want to see what you choose and use! We adjusted the transparency of the filters so any image can look good. Go ahead, try and use your own! You'll see how great it looks with our design.
-
-IMPORTANT - If you want to integrate a third party service for register emails we've made a tutorial here:  http://blog.creative-tim.com/web-development/set-mailchimp-custom-coming-soon-page/
-
-## Links:
-
-+ [Live Preview](http://demos.creative-tim.com/coming-sssoon-demo-image-background)
-
-## Quick start
-
-Quick start options:
-
-- [Download from Github](https://github.com/creativetimofficial/coming-sssoon-page.git).
-- [Download from Creative Tim](https://www.creative-tim.com/product/coming-sssoon-page).
-- Clone the repo: `git clone https://github.com/creativetimofficial/coming-sssoon-page.git`.
+The user guide corresponding to this version of the framework can be found
+[here](https://codeigniter4.github.io/userguide/). 
 
 
-### What's included
+## Important Change with index.php
 
-Within the download you'll find the following directories and files:
+`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+for better security and separation of components.
 
-```
-x_coming_sssoon_page/
-├── components.html
-├── css
-│   ├── bootstrap.css
-│   ├── coming-sssoon-demo.css
-│   └── coming-sssoon.css
-├── demo-cream-app.html
-├── demo-image-background.html
-├── demo-restaurant.html
-├── demo-video-background.html
-├── images/
-├── index.html
-└── js
-    ├── bootstrap.min.js
-    └── jquery-1.10.2.js
+This means that you should configure your web server to "point" to your project's *public* folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+framework are exposed.
 
-```
+**Please** read the user guide for a better explanation of how CI4 works!
+The user guide updating and deployment is a bit awkward at the moment, but we are working on it!
 
-### Version logs
+## Repository Management
 
-V1.3.2, 10 Feb 2017 [current version]
-- switched to MIT license .
+We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
+We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
+FEATURE REQUESTS.
 
+This repository is a "distribution" one, built by our release preparation script. 
+Problems with it can be raised on our forum, or as issues in the main repository.
 
-### License
+## Contributing
 
-- Copyright 2017 Creative Tim (http://www.creative-tim.com)
-- Licensed under MIT (https://github.com/creativetimofficial/coming-sssoon-page/blob/master/LICENSE.md)
+We welcome contributions from the community.
 
+Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing.md) section in the development repository.
 
-## Useful Links
+## Server Requirements
 
-More products from Creative Tim: <http://www.creative-tim.com/products>
+PHP version 7.2 or higher is required, with the following extensions installed: 
 
-Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
-Freebies: <http://www.creative-tim.com/products>
+Additionally, make sure that the following extensions are enabled in your PHP:
 
-Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
-
-Social Media:
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
+- json (enabled by default - don't turn it off)
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
+- xml (enabled by default - don't turn it off)
