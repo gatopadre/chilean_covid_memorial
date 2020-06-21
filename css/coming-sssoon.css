@@ -745,7 +745,12 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     z-index: 4;
 }
 .main .motto{
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 1.9em;
+    font-variant: none;
     min-height: 140px;
+    text-indent: 3em;
 }
 .main .motto, .main .subscribe .info-text{
     font-size: 23px;
