@@ -9,4 +9,8 @@ class Home extends BaseController
 
 	//--------------------------------------------------------------------
 
+	public function save_form()
+	{
+		echo true;
+	}
 }

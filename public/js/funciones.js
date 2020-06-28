@@ -7,23 +7,15 @@ $(document).ready(function(){
 })
 
 function enviarFormulario(formulario) {
-    console.log(formulario);
-    
-    // var button = $('#' + action);
-    // var form = button.parent().parent();
-    // var output = button.next();
-    // var button_copy = button.next().next();
-
-    // $.ajax({
-    //     type: 'POST',
-    //     url: action,
-    //     contentType: 'application/json',
-    //     data: JSON.stringify(form.serializeArray()),
-    //     dataType: 'json',
-    //     success: function(response) {
-    //         output.html('<pre class="query">' + response + '</pre>');
-    //         output.show();
-    //         button_copy.show();
-    //     }
-    // });
+    var base_url = window.location.href;    
+    $.ajax({
+        type: 'POST',
+        url: base_url + 'index.php/home/save_form',
+        contentType: 'application/json',
+        data: JSON.stringify(formulario.serializeArray()),
+        dataType: 'json',
+        success: function(response) {
+            console.log(response);
+        }
+    });
 }
