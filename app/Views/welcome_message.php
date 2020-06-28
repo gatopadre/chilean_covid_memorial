@@ -10,8 +10,9 @@
 
   <title>Chilean Covid Memorial</title>
 
-  <link href="css/bootstrap.css" rel="stylesheet" />
-  <link href="css/coming-sssoon.css" rel="stylesheet" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="<?php echo base_url('/css/bootstrap.css');?>" />
+  <link href="<?php echo base_url('/css/coming-sssoon.css');?>" rel="stylesheet" />
 
   <!--     Fonts     -->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
