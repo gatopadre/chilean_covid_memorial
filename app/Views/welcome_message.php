@@ -8,7 +8,7 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
 
-  <title>Chilean Covid Memorial</title>
+  <title>Chile Covid Memorial</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="<?php echo base_url('/css/bootstrap.css');?>" />
@@ -70,7 +70,7 @@
 
     <div class="container">
       <h1 class="logo cursive" style="font-style: italic;">
-        Chilenos Covid Memorial
+        Chile Covid Memorial
       </h1>
       <div class="content">
         <h4 class="motto shadow">
