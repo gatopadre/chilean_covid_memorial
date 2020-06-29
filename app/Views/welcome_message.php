@@ -86,42 +86,41 @@
               <h5 class="info-text text">
                 Dejanos tus datos el formulario a continuación, para que tu ser querido sea parte de esta intervención.
               </h5>
-              <form class="form" role="form" id="form-inscripcion">
+              <form class="form" role="form" id="form-inscripcion" id="form-inscripcion">
                 <div class="form-group">
                   <label class="sr-only" for="nombre-input">Ingresa nombre de tu ser querido</label>
-                  <input type="text" class="form-control transparent" placeholder="Escribe nombre de tu ser querido aqui">
+                  <input name="nombre" type="text" class="form-control transparent" placeholder="Escribe nombre de tu ser querido aqui">
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="rut-input">Ingresa rut de tu ser querido</label>
-                  <input type="text" class="form-control transparent" placeholder="Escribe rut de tu ser querido">
+                  <input name="rut" type="text" class="form-control transparent" placeholder="Escribe rut de tu ser querido">
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="image-input">Ingresa tu correo de contacto</label>
-                  <input type="email" class="form-control transparent" placeholder="Escribe tu correo de contacto">
+                  <input name="email" type="email" class="form-control transparent" placeholder="Escribe tu correo de contacto">
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="image-input">Ingresa tu teléfono de contacto</label>
-                  <input type="tel" class="form-control transparent" placeholder="Escribe tu teléfono de contacto">
+                  <input name="telefono" type="tel" class="form-control transparent" placeholder="Escribe tu teléfono de contacto">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="image-input">Ingresa tu relacion con la persona</label>
-                  <select name="select-relacion" id="select-relacion" class="form-control transparent">
+                  <label class="sr-only" for="relacion-input">Ingresa tu relacion con la persona</label>
+                  <select name="relacion" id="relacion" class="form-control transparent">
                     <option value="">Indicanos tu relacion con la persona</option>
-                    <option value="familiar">familiar</option>
                     <option value="familiar">familiar</option>
                     <option value="amigo">amigo</option>
                     <option value="conocido">conocido</option>
                     <option value="vecino">vecino</option>
                   </select>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label class="sr-only" for="image-input">Adjunta una foto de la persona y un mensaje para ella o el.</label>
                   <p class="image-text text">(Opcional) Si lo deseas adjunta una foto de la persona y un mensaje para ella o el.</p>
-                  <input type="file" class="form-control transparent" placeholder="Adjunta una imagen de la persona">
-                </div>
+                  <input type="file" name="foto" class="form-control transparent" placeholder="Adjunta una imagen de la persona">
+                </div> -->
                 <div class="form-group">
-                  <label class="sr-only" for="email-input">Dejale un mensaje de recuerdo</label>
-                  <textarea class="form-control transparent" placeholder="Escribe un mensaje de recuerdo" rows="4"></textarea>
+                  <label class="sr-only" for="mensaje-input">Dejale un mensaje de recuerdo</label>
+                  <textarea name="mensaje" id="mensaje" class="form-control transparent" placeholder="Escribe un mensaje de recuerdo" rows="4"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-fill pull-right" id="btn-confirmar">Confirmar</button>
               </form>
