@@ -60,7 +60,7 @@
     </div><!-- /.container -->
   </nav>
 
-  <div class="main" style="background-image: url(<?php echo base_url('images/default.jpg');?>)">
+  <div class="main" style="background-image: url(<?php echo base_url('images/default.jpg'); ?>)">
 
     <!--    Change the image source '/images/default.jpg' with your favourite image.     -->
 
@@ -85,11 +85,11 @@
               <h5 class="info-text text">
                 Dejanos tus datos el formulario a continuación, para que tu ser querido sea parte de esta intervención.
               </h5>
-              <?php if(isset($success)) { ?>
+              <?php if (isset($success)) { ?>
                 <div class="alert alert-success" role="alert">
                   <?= $success ?>
                 </div>
-              <?php }?>
+              <?php } ?>
               <form class="form" action="<?php echo base_url('index.php/home'); ?>" role="form" name="form-inscripcion" id="form-inscripcion" method="post">
                 <div class="form-group">
                   <label class="sr-only" for="nombre-input">Ingresa nombre de tu ser querido</label>
@@ -123,15 +123,16 @@
                   <input type="file" name="foto" class="form-control transparent" placeholder="Adjunta una imagen de la persona">
                 </div> -->
                 <div class="form-group">
-                <p class="image-text text">(Opcional) Si lo deseas deja un mensaje para ella ó el.</p>
+                  <p class="image-text text">(Opcional) Si lo deseas deja un mensaje para ella ó el.</p>
                   <label class="sr-only" for="mensaje-input">Dejale un mensaje de recuerdo</label>
                   <textarea name="mensaje" id="mensaje" class="form-control transparent" placeholder="Escribe un mensaje de recuerdo" rows="4"></textarea>
                 </div>
-                <?php if($isPost) { ?>
+                <?php if ($isPost) { ?>
                   <div class="alert alert-danger" role="alert">
                     <?= $validation->listErrors() ?>
                   </div>
-                <?php }?>
+                <?php } ?>
+                <div class="g-recaptcha" data-sitekey="6LeH1aoZAAAAAP3ty9-QsczMkcbeWTvxZCDbgoTG"></div>
                 <button type="submit" class="btn btn-primary btn-fill pull-right" id="btn-confirmar">Confirmar</button>
               </form>
             </div>
@@ -149,6 +150,6 @@
 </body>
 <script src="<?php echo base_url('js/jquery-1.10.2.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo base_url('js/bootstrap.min.js'); ?>" type="text/javascript"></script>
-<!-- <script src="js/funciones.js" type="text/javascript"></script> -->
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
 
 </html>
