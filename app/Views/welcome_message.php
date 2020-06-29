@@ -11,8 +11,8 @@
   <title>Chile Covid Memorial</title>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="<?php echo base_url('/css/bootstrap.css');?>" />
-  <link href="<?php echo base_url('/css/coming-sssoon.css');?>" rel="stylesheet" />
+  <link rel="stylesheet" href="<?php echo base_url('/css/bootstrap.css'); ?>" />
+  <link href="<?php echo base_url('/css/coming-sssoon.css'); ?>" rel="stylesheet" />
 
   <!--     Fonts     -->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
@@ -86,7 +86,7 @@
               <h5 class="info-text text">
                 Dejanos tus datos el formulario a continuación, para que tu ser querido sea parte de esta intervención.
               </h5>
-              <form class="form" role="form" id="form-inscripcion" id="form-inscripcion">
+              <form class="form" action="/formulario/save" role="form" name="form-inscripcion" id="form-inscripcion" method="post">
                 <div class="form-group">
                   <label class="sr-only" for="nombre-input">Ingresa nombre de tu ser querido</label>
                   <input name="nombre" type="text" class="form-control transparent" placeholder="Escribe nombre de tu ser querido aqui">
@@ -121,6 +121,9 @@
                 <div class="form-group">
                   <label class="sr-only" for="mensaje-input">Dejale un mensaje de recuerdo</label>
                   <textarea name="mensaje" id="mensaje" class="form-control transparent" placeholder="Escribe un mensaje de recuerdo" rows="4"></textarea>
+                </div>
+                <div class="alert alert-danger" role="alert">
+                  <?= $validation->listErrors() ?>
                 </div>
                 <button type="submit" class="btn btn-primary btn-fill pull-right" id="btn-confirmar">Confirmar</button>
               </form>

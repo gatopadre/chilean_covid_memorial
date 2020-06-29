@@ -4,14 +4,30 @@ class Home extends BaseController
 {	
 	public function index()
 	{
-		return view('welcome_message');
+		helper(['form', 'url']);
+
+		$validate = [
+            'nombre' => 'required|min_length[4]|max_length[100]',
+            'rut'  => 'required|min_length[9]|max_length[10]',
+            'correo' => 'required|'
+        ];
+
+        if (! $this->validate($validate))
+        {
+            echo view('welcome_message', [
+                'validation' => $this->validator
+            ]);
+        }
+        else
+        {
+            return view('welcome_message');
+        }		
 	}
 
 	//--------------------------------------------------------------------
 
 	public function save_form()
 	{
-		$db = \Config\Database::connect();
 		$form_data = $this->request->getRawInput();
 		// $files = $this->request->getFiles();
 		// var_dump($form_data, $files); die();
@@ -25,7 +41,7 @@ class Home extends BaseController
 			'relacion' => $form_data['relacion'],
 			'mensaje' => $form_data['mensaje'],
 		];
-		$insert_result = $db->table('form_data')->insert($data);
+		$insert_result = $this->database->table('form_data')->insert($data);
 				 
 		echo true;
 	}
