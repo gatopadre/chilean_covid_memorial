@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 
 <head>
   <meta charset="utf-8" />
@@ -80,42 +80,41 @@
           en marcha una idea, crear un memorial social o intervención a nombre de todos los talentos y humanos que hemos perdido para dar una
           merecida despedida y homenaje que nos permita recordarlos como los integrantes que fueron de nuestra sociedad.</h4>
         <div class="subscribe">
-
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
               <h5 class="info-text text">
                 Dejanos tus datos el formulario a continuación, para que tu ser querido sea parte de esta intervención.
               </h5>
               <?php if(isset($success)) { ?>
-                  <div class="alert alert-success" role="alert">
-                    <?= $success ?>
-                  </div>
-                <?php }?>
+                <div class="alert alert-success" role="alert">
+                  <?= $success ?>
+                </div>
+              <?php }?>
               <form class="form" action="<?php echo base_url('index.php/home'); ?>" role="form" name="form-inscripcion" id="form-inscripcion" method="post">
                 <div class="form-group">
                   <label class="sr-only" for="nombre-input">Ingresa nombre de tu ser querido</label>
-                  <input name="nombre" type="text" class="form-control transparent" placeholder="Escribe nombre de tu ser querido aqui">
+                  <input name="nombre" type="text" class="form-control transparent" placeholder="Escribe nombre de la persona">
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="rut-input">Ingresa rut de tu ser querido</label>
-                  <input name="rut" type="text" class="form-control transparent" placeholder="Escribe rut de tu ser querido">
+                  <input name="rut" type="text" class="form-control transparent" placeholder="Escribe rut de la persona. Ej: 12345678-0">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="image-input">Ingresa tu correo de contacto</label>
-                  <input name="email" type="email" class="form-control transparent" placeholder="Escribe tu correo de contacto">
+                  <label class="sr-only" for="email-input">Ingresa tu correo de contacto</label>
+                  <input name="email" type="email" class="form-control transparent" placeholder="Escribe tu correo de contacto. Ej: nombre@correo.cl" oninvalid="setCustomValidity('Debe contener @')">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="image-input">Ingresa tu teléfono de contacto</label>
-                  <input name="telefono" type="tel" class="form-control transparent" placeholder="Escribe tu teléfono de contacto">
+                  <label class="sr-only" for="telefono-input">Ingresa tu teléfono de contacto</label>
+                  <input name="telefono" type="tel" class="form-control transparent" placeholder="Escribe tu teléfono de contacto. Ej:+56912345678">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="relacion-input">Ingresa tu relacion con la persona</label>
+                  <label class="sr-only" for="relacion-input">Ingresa tu relación con la persona</label>
                   <select name="relacion" id="relacion" class="form-control transparent">
-                    <option value="">Indicanos tu relacion con la persona</option>
-                    <option value="familiar">familiar</option>
-                    <option value="amigo">amigo</option>
-                    <option value="conocido">conocido</option>
-                    <option value="vecino">vecino</option>
+                    <option value="" disabled selected>Indicanos la relacion que tenias con la persona</option>
+                    <option value="familiar">Familiar</option>
+                    <option value="amigo">Amigo</option>
+                    <option value="vecino">Vecino</option>
+                    <option value="conocido">Conocido</option>
                   </select>
                 </div>
                 <!-- <div class="form-group">
@@ -124,6 +123,7 @@
                   <input type="file" name="foto" class="form-control transparent" placeholder="Adjunta una imagen de la persona">
                 </div> -->
                 <div class="form-group">
+                <p class="image-text text">(Opcional) Si lo deseas deja un mensaje para ella ó el.</p>
                   <label class="sr-only" for="mensaje-input">Dejale un mensaje de recuerdo</label>
                   <textarea name="mensaje" id="mensaje" class="form-control transparent" placeholder="Escribe un mensaje de recuerdo" rows="4"></textarea>
                 </div>

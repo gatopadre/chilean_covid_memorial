@@ -12,7 +12,9 @@ class Home extends BaseController
 			$validations = $this->validate([
 				'nombre' => 'required|min_length[4]|max_length[100]',
 				'rut'  => 'required|min_length[9]|max_length[10]',
-				'correo' => 'required|valid_email'
+				'email' => 'required|valid_email',
+				'telefono' => 'required|min_length[9]|max_length[12]',
+				'relacion' => 'required'
 			]);
 	
 			if (!$validations)
@@ -36,7 +38,7 @@ class Home extends BaseController
 				$database->table('form_data')->insert($data);
 				if ($database->affectedRows() > 0) {
 					#TODO: mejorar redaccion mensaje
-					$succes = "Se ha guardado";
+					$succes = "Formulario guardado exitosamente, recibiras un correo con la confirmacion.";
 					$isPost = false;
 				}
 				return view('welcome_message', [

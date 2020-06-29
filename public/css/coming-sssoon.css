@@ -821,12 +821,19 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     }   
     .main .subscribe .form-inline .btn{
         width: 100%;
-    }   
+    } 
+    
+    option {
+        color: gray;
+    }
 }
 @media (min-width:768px){        
     .main .subscribe .form-inline .btn{
         width: auto;
     }   
+    option {
+        color: gray;
+    }
 }
 @media (min-width:991px){        
     .main .subscribe .form-group{
@@ -836,11 +843,17 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
         position: auto;
         bottom: 20px;
     }
+    option {
+        color: gray;
+    }
 }
 @media (min-width:1200px){        
     .main .subscribe .form-group{
         width: auto;
-    }   
+    } 
+    option {
+        color: gray;
+    }  
 }
 
 
